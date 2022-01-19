@@ -31,7 +31,7 @@ presente no diretório: /src/main/resources/application.properties, caso ao cont
 banco de dados.
 
 -----------------------------------------------------------------------------------------------------------------------------
-Você pode abrir o projeto em sua IDE, executar o arquivo .jar <GustavoGerenciaFuncionarios-0.0.1-SNAPSHOT> ou executar o comando
+Você pode abrir o projeto em sua IDE, gerar e executar o arquivo .jar <GustavoGerenciaFuncionarios-0.0.1-SNAPSHOT> ou executar o comando
 abaixo caso prefira
 
      mvn spring-boot:run
