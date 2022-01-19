@@ -1,0 +1,17 @@
+package com.gustavo.gerencia.funcionarios.api;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * @author Gustavo.Batista
+ *
+ */
+@SpringBootApplication
+public class GustavoGerenciaFuncionariosApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(GustavoGerenciaFuncionariosApplication.class, args);
+	}
+
+}
