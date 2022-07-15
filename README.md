@@ -70,9 +70,9 @@ Deletar do banco de dados:
     
 -----------------------------------------------------------------------------------------------------------------------------
 
-Se precisar entrar em contato comigo pode encontrar pelos meios de comunicação abaixo:
+Se precisar entrar em contato comigo pode me encontrar pelos meios de comunicação abaixo:
 
 	e-Mail: gustavo.dev97@gmail.com
 	GitHub: github.com/Gustav-dev97
 
-	Muito Obrigado!
+Muito Obrigado!
