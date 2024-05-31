@@ -1,8 +1,14 @@
-# Use a imagem do JDK 8 como base
-FROM openjdk:8
+# Use a imagem do Maven 3.6.0 com JDK 8 como base
+FROM maven:3.6.0-jdk-8
 
-# Copiar o arquivo JAR para o diretório esperado pelo Kaniko
+# Copiar os arquivos do projeto para o contêiner
+COPY . /usr/src/myapp
 
+# Definir o diretório de trabalho para onde o projeto foi copiado
+WORKDIR /usr/src/myapp
+
+# Compilar o projeto e criar o arquivo JAR
+RUN mvn clean package -Dmaven.test.skip=true
 
 # Executar o aplicativo
-ENTRYPOINT ["java", "-jar", "/GustavoGerenciaFuncionarios-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "target/GustavoGerenciaFuncionarios-0.0.1-SNAPSHOT.jar"]
