@@ -1,5 +1,5 @@
 # Use a imagem do JDK 8 como base
-FROM maven:3.6.0-jdk-8
+FROM maven:3.9.7-jdk-8
 
 # Copiar os arquivos do projeto para o contêiner
 COPY . /usr/src/myapp
