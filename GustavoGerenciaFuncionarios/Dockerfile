@@ -10,5 +10,8 @@ WORKDIR /usr/src/myapp
 # Compilar o projeto e criar o arquivo JAR
 RUN mvn clean package -Dmaven.test.skip=true
 
+# Listar os arquivos no diretório target/ após a tentativa de construção do JAR.
+RUN ls -la /usr/src/myapp/target/
+
 # Executar o aplicativo
 ENTRYPOINT ["java", "-jar", "target/GustavoGerenciaFuncionarios-0.0.1-SNAPSHOT.jar"]
