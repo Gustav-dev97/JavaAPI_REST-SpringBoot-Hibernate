@@ -7,8 +7,8 @@ COPY . /usr/src/myapp
 # Definir o diretório de trabalho para onde o projeto foi copiado
 WORKDIR /usr/src/myapp
 
-# Compilar o projeto e criar o arquivo JAR
-RUN mvn clean package -Dmaven.test.skip=true
+# Compilar o projeto e criar o arquivo JAR com saída de depuração
+RUN mvn clean package -Dmaven.test.skip=true -X
 
 # Listar os arquivos no diretório target/ após a tentativa de construção do JAR.
 RUN ls -la /usr/src/myapp/target/
