@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 17
+Implementation-Title: GustavoGerenciaFuncionarios
+Implementation-Version: 0.0.1-SNAPSHOT
+Main-Class: com.gustavo.gerencia.funcionarios.api.GustavoGerenciaFuncion
+ ariosApplication
+Created-By: Maven Integration for Eclipse
+

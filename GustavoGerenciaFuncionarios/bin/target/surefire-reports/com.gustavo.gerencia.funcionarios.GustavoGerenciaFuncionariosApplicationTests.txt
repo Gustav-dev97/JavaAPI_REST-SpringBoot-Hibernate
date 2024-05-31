@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.gustavo.gerencia.funcionarios.GustavoGerenciaFuncionariosApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.792 s <<< FAILURE! - in com.gustavo.gerencia.funcionarios.GustavoGerenciaFuncionariosApplicationTests
+com.gustavo.gerencia.funcionarios.GustavoGerenciaFuncionariosApplicationTests  Time elapsed: 1.786 s  <<< ERROR!
+java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
+
