@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  mysqldb:
+    image: mysql:5.7
+    platform: linux/x86_64
+    environment:
+      MYSQL_ROOT_PASSWORD: apiportfolio
+      MYSQL_DATABASE: crudapi
+      MYSQL_USER: gustavo
+      MYSQL_PASSWORD: apiportfolio
+    volumes:
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    networks:
+      - springboot-mysql-net
+
+  springboot-app:
+    build: .
+    image: springbootmysql
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysqldb
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/crudapi
+      SPRING_DATASOURCE_USERNAME: gustavo
+      SPRING_DATASOURCE_PASSWORD: apiportfolio
+    networks:
+      - springboot-mysql-net
+
+networks:
+  springboot-mysql-net:
+    driver: bridge
