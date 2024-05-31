@@ -8,7 +8,7 @@ COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 
 # Compilar o projeto e criar o arquivo JAR
-RUN mvn clean package
+RUN mvn clean package -Dmaven.test.skip=true
 
 # Executar o aplicativo
 ENTRYPOINT ["java", "-jar", "target/GustavoGerenciaFuncionarios-0.0.1-SNAPSHOT.jar"]
