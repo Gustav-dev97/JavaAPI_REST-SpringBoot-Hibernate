@@ -10,5 +10,8 @@ WORKDIR /usr/src/myapp
 # Compilar o projeto e criar o arquivo JAR
 RUN mvn clean package -Dmaven.test.skip=true
 
+# Expor a porta 8080
+EXPOSE 8080
+
 # Executar o aplicativo
 ENTRYPOINT ["java", "-jar", "target/GustavoGerenciaFuncionarios-0.0.1-SNAPSHOT.jar"]
