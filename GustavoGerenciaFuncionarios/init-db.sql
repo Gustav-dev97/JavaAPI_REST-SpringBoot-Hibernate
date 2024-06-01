@@ -1,3 +1,4 @@
+CREATE DATABASE IF NOT EXISTS crudapi;
 USE crudapi;
 
 CREATE TABLE tbl_funcionario
