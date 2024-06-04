@@ -2,7 +2,7 @@
 FROM maven:3.6.0-jdk-8
 
 # Copiar os arquivos do projeto para o contêiner
-COPY . /usr/src/myapp
+COPY wait-for-it.sh /usr/src/myapp
 
 # Definir o diretório de trabalho para onde o projeto foi copiado
 WORKDIR /usr/src/myapp
@@ -14,4 +14,4 @@ RUN mvn clean package -Dmaven.test.skip=true
 EXPOSE 8080
 
 # Executar o aplicativo
-ENTRYPOINT ["java", "-jar", "target/GustavoGerenciaFuncionarios-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["./wait-for-it.sh", "mysqldb:3306", "--", "java", "-jar", "target/GustavoGerenciaFuncionarios-0.0.1-SNAPSHOT.jar"]
