@@ -67,6 +67,13 @@ Deletar do banco de dados:
 
     DELETE 
     localhost:8080/api/funcionario/{id}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Para iniciar o container: 
+
+	cd JavaAPI_REST-SpringBoot-Hibernate-main/JavaAPI_REST-SpringBoot-Hibernate-main/GustavoGerenciaFuncionarios
+	docker-compose up
     
 -----------------------------------------------------------------------------------------------------------------------------
 
