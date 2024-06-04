@@ -70,7 +70,7 @@ Deletar do banco de dados:
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-Para iniciar o container: 
+Para iniciar o container (PORT 3307): 
 
 	cd JavaAPI_REST-SpringBoot-Hibernate-main/JavaAPI_REST-SpringBoot-Hibernate-main/GustavoGerenciaFuncionarios
  
