@@ -11,9 +11,6 @@ WORKDIR /usr/src/myapp
 RUN mvn clean package -Dmaven.test.skip=true
 
 # Expor a porta 8080
-EXPOSE 3306
-
-# Expor a porta 8080
 EXPOSE 8080
 
 # Executar o aplicativo
