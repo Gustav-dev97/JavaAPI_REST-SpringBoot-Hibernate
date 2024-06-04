@@ -7,17 +7,12 @@ services:
       - "8080:8080"
     depends_on:
       - mysqldb
-    environment:
-      - DATABASE_HOST=mysqldb
-      - DATABASE_USER=gustavo
-      - DATABASE_PASSWORD=apiportfolio
-      - DATABASE_NAME=crudapi
-  mysqldb:
+  mysqldb:   
     platform: linux/x86_64
     image: "mysql:5.7"
     restart: always
     ports:
-      - "3306:3306"
+      - "3307:3306"
     environment:
       MYSQL_DATABASE: crudapi
       MYSQL_USER: gustavo
@@ -25,4 +20,3 @@ services:
       MYSQL_ROOT_PASSWORD: apiportfolio
     volumes:
       - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
-
