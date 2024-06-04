@@ -1,25 +1,25 @@
 version: '3.8'
-
 services:
   mysqldb:
     image: mysql:5.7
     platform: linux/x86_64
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: apiportfolio
       MYSQL_DATABASE: crudapi
       MYSQL_USER: gustavo
       MYSQL_PASSWORD: apiportfolio
+    ports:
+      - "3306:3306"
     volumes:
       - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
     networks:
       - springboot-mysql-net
-    restart: always
-    ports:
-      - "3306:3306"
 
   springboot-app:
     build: .
     image: springbootmysql
+    restart: always
     ports:
       - "8080:8080"
     depends_on:
@@ -30,14 +30,6 @@ services:
       SPRING_DATASOURCE_PASSWORD: apiportfolio
     networks:
       - springboot-mysql-net
-
-  server:
-    build: .
-    restart: always
-    ports:
-      - "8080:8080"
-    depends_on:
-      - mysqldb
 
 networks:
   springboot-mysql-net:
