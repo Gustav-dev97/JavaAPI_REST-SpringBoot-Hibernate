@@ -7,6 +7,8 @@ COPY . /usr/src/myapp
 # Definir o diretório de trabalho para onde o projeto foi copiado
 WORKDIR /usr/src/myapp
 
+RUN docker-compose up
+
 # Compilar o projeto e criar o arquivo JAR
 RUN mvn clean package -Dmaven.test.skip=true
 
