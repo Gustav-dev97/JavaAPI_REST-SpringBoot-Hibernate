@@ -2,19 +2,19 @@ services:
   - type: web
     name: server
     env: docker
-    buildCommand: ./build.sh 
-    startCommand: ./start.sh 
+    buildCommand: "docker build -t gestaofuncionarios ."
+    startCommand: "docker run -d -p 8080:8080 gestaofuncionarios"
+    dockerfilePath: "Gustav-dev97/JavaAPI_REST-SpringBoot-Hibernate/blob/main/GustavoGerenciaFuncionarios/Dockerfile"
     envVars:
       - key: PORT
         value: 8080
-    dockerfilePath: ./GustavoGerenciaFuncionarios/Dockerfile 
     dependsOn:
       - mysqldb
 
   - type: pserv
     name: mysqldb
     env: docker
-    dockerfilePath: ./JavaAPI_REST-SpringBoot-Hibernate/blob/main/GustavoGerenciaFuncionarios/Dockerfile 
+    image: "mysql:5.7"
     envVars:
       - key: MYSQL_DATABASE
         value: crudapi
@@ -30,4 +30,4 @@ services:
 
 volumes:
   - name: init-db
-    path: ./init-db.sql
+    path: "./init-db.sql"
